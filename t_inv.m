@@ -1,4 +1,5 @@
 function [Tensor_inv] = t_inv(Tensor) 
+% calculate the inverse of a 3-order tensor
 Tensor_fft = fft(Tensor, [], 3);
 tensor_inv_fft = zeros(size(Tensor_fft));
 for i = 1:3
