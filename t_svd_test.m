@@ -1,9 +1,6 @@
 close all;
 clear all;
 
-addpath('toolbox\');
-addpath('tensor_toolbox\');
-
 A_tensor = imread('beads_RGB.bmp');
 A_tensor = double(A_tensor) / 255.0;
 

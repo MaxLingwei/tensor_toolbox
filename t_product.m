@@ -1,5 +1,5 @@
 function [C_tensor] = t_product(A_tensor, B_tensor)
-
+% calculate t_product of two 3-d tensors
 circ_A = [A_tensor(:, :, 1), A_tensor(:, :, 3), A_tensor(:, :, 2);
           A_tensor(:, :, 2), A_tensor(:, :, 1), A_tensor(:, :, 3);
           A_tensor(:, :, 3), A_tensor(:, :, 2), A_tensor(:, :, 1)];
