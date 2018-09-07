@@ -1,3 +1,5 @@
 function [X] = soft_shrinkage(Y, lambda)
-[~, S, ~] = svd(Y, 'econ');
-X = S .* ((S - lambda) > 0);
+[U, S, V] = svd(Y, 'econ');
+S = S - diag(lambda * ones(length(S), 1));
+S = S .* (S > 0);
+X = U * S * V';

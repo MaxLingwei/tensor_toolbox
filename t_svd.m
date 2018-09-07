@@ -8,6 +8,7 @@ D_t = fft(A_t, [], 3);
 
 for i = 1:n3
     [U, S, V] = svd(D_t(:, :, i), 'econ');
+    %[U, S, V] = svd_beta(D_t(:, :, i), 1e-9);
     U_t(:, :, i) = U;
     S_t(:, :, i) = S;
     V_t(:, :, i) = V;

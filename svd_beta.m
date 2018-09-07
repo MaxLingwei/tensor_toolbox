@@ -1,5 +1,4 @@
-function [U, S, V] = svd_beta(X)
-threshold = 1e-10;
+function [U, S, V] = svd_beta(X, threshold)
 [U_, S_, V_] = svd(X, 'econ');
 sdiag = diag(S_ .* (S_ > threshold));
 real_r = max(find(sdiag > 0));
