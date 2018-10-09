@@ -13,6 +13,6 @@ for i = 1:n3
     S_t(:, :, i) = S;
     V_t(:, :, i) = V;
 end
-U_t = ifft(U_t, [], 3);
-S_t = ifft(S_t, [], 3);
-V_t = ifft(V_t, [], 3);
+U_t = real(ifft(U_t, [], 3));
+S_t = real(ifft(S_t, [], 3));
+V_t = real(ifft(V_t, [], 3));
